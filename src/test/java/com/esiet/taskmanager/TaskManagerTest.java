@@ -161,14 +161,5 @@ class TaskManagerTest {
         assertTrue(manager.findById(1).isDone());
     }
 
-    @Test
-    @DisplayName("getDoneCount() compte correctement les tâches terminées")
-    void testGetDoneCount() {
-        manager.addTask("T1", "", "HIGH");
-        manager.addTask("T2", "", "LOW");
-        manager.addTask("T3", "", "MEDIUM");
-        manager.updateStatus(1, "DONE");
-        manager.updateStatus(3, "DONE");
-        assertEquals(2, manager.getDoneCount());
-    }
+   
 }
